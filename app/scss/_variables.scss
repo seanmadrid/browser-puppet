@@ -1,0 +1,19 @@
+/*==========================
+DIMENSIONS
+==========================*/
+$d-base: 100px;
+$d-double: calc(#{$d-base} * 2);
+$d-quadruple: calc(#{$d-base} * 4);
+$d-half: calc(#{$d-base} / 2);
+$d-third: calc(#{$d-base} / 3);
+$d-quarter: calc(#{$d-base} / 4);
+$d-threequarters: calc(#{$d-quarter} * 3);
+$d-eighth: calc(#{$d-base} / 8);
+
+/*==========================
+COLORS
+==========================*/
+$c-skin: #ffb8f4;
+$c-shirt: #ffe83e;
+$c-pants: #8cde7c;
+$c-shoes: #0080f9;
