@@ -1,5 +1,29 @@
-.h-center {
-	position: absolute;
-	left: 50%;
-    transform: translateX(-50%);
+.screen-left {
+	.sm-puppet-eyes {
+		margin-left: 7px;
+	}
+	.sm-puppet-leg .sm-puppet-foot {
+		left: -2px;
+	}
+}
+
+.screen-right {
+	.sm-puppet-eyes {
+		margin-left: -5px;
+	}
+	.sm-puppet-leg .sm-puppet-foot {
+		left: -18px;
+	}
+}
+
+.screen-top {
+	.sm-puppet-eyes {
+		margin-top: 10px;
+	}
+}
+
+.screen-bottom {
+	.sm-puppet-eyes {
+		margin-top: 0;
+	}
 }

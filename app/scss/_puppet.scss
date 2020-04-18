@@ -1,3 +1,9 @@
+.x-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .smbrowserpuppet53 {
     position: fixed;
     top: $d-eighth;
@@ -26,7 +32,7 @@
     height: $d-threequarters;
     background-color: $c-skin;
     border-radius: 60% 60% 60% 60% / 40% 40% 60% 60%;
-    @extend .h-center;
+    @extend .x-center;
 }
 
 .sm-puppet-eyes {
@@ -36,11 +42,12 @@
     left: 50%;
     transform: translateX(-50%);
     top: $d-quarter;
+    transition: margin .25s;
 }
 
 .sm-puppet-eye {
-    width: calc(#{$d-eighth} / 2);
-    height: calc(#{$d-eighth} / 2);
+    width: calc(#{$d-eighth} / 1.5);
+    height: calc(#{$d-eighth} / 1.5);
     border-radius: 50%;
     background: black;
     opacity: .3333;
@@ -65,6 +72,7 @@
     transform: translateX(-50%);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    z-index: 2;
 }
 
 .sm-puppet-legs {
@@ -75,7 +83,8 @@
     border-bottom-left-radius: $d-quarter;
     border-bottom-right-radius: $d-quarter;
     top: calc(#{$d-base} + #{$d-threequarters});
-    @extend .h-center;
+    @extend .x-center;
+    z-index: 1;
 }
 
 .sm-puppet-leg-container {
@@ -95,15 +104,18 @@
         height: $d-threequarters;
         background: $c-shirt;
         z-index: 0;
+        border-radius: $d-eighth;
     }
 
     .sm-puppet-forearm {
+        transform-origin: top center;
         width: $d-eighth;
         height: $d-threequarters;
-        margin-top: -5px;
+        margin-top: -8px;
         background: $c-skin;
         z-index: 1;
         border-radius: $d-eighth;
+        transition: all .25s;
     }
 
     .sm-puppet-hand {
@@ -121,8 +133,9 @@
         transform: rotate(20deg) translateX(5px);
         transform-origin: top right;
 
-        .sm-puppet-upper-arm {
-            border-top-left-radius: $d-eighth;
+        .sm-puppet-forearm {
+            transform: rotate(-45deg);
+            margin-left: -5px;
         }
 
         .sm-puppet-hand {
@@ -135,8 +148,9 @@
         transform-origin: top left;
         transform: rotate(-20deg) translateX(-5px);
 
-        .sm-puppet-upper-arm {
-            border-top-right-radius: $d-eighth;
+        .sm-puppet-forearm {
+            transform: rotate(45deg);
+            margin-left: 5px;
         }
 
         .sm-puppet-hand {
@@ -172,6 +186,7 @@
         bottom: calc(#{$d-eighth} * -.5);
         z-index: 2;
         border-radius: calc(#{$d-eighth} * .75);
+        transition: all .25s;
     }
 
     &.sm-puppet-leg-left {

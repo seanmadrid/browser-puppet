@@ -4,7 +4,25 @@ DIMENSIONS
 /*==========================
 COLORS
 ==========================*/
-.h-center, .sm-puppet-head, .sm-puppet-legs {
+.screen-left .sm-puppet-eyes {
+  margin-left: 7px; }
+
+.screen-left .sm-puppet-leg .sm-puppet-foot {
+  left: -2px; }
+
+.screen-right .sm-puppet-eyes {
+  margin-left: -5px; }
+
+.screen-right .sm-puppet-leg .sm-puppet-foot {
+  left: -18px; }
+
+.screen-top .sm-puppet-eyes {
+  margin-top: 10px; }
+
+.screen-bottom .sm-puppet-eyes {
+  margin-top: 0; }
+
+.x-center, .sm-puppet-head, .sm-puppet-legs {
   position: absolute;
   left: 50%;
   transform: translateX(-50%); }
@@ -41,11 +59,12 @@ COLORS
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: calc(100px / 4); }
+  top: calc(100px / 4);
+  transition: margin .25s; }
 
 .sm-puppet-eye {
-  width: calc(calc(100px / 8) / 2);
-  height: calc(calc(100px / 8) / 2);
+  width: calc(calc(100px / 8) / 1.5);
+  height: calc(calc(100px / 8) / 1.5);
   border-radius: 50%;
   background: black;
   opacity: .3333;
@@ -66,7 +85,8 @@ COLORS
   margin-left: 100px;
   transform: translateX(-50%);
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px; }
+  border-top-right-radius: 5px;
+  z-index: 2; }
 
 .sm-puppet-legs {
   width: calc(100px / 2);
@@ -74,7 +94,8 @@ COLORS
   background: #8cde7c;
   border-bottom-left-radius: calc(100px / 4);
   border-bottom-right-radius: calc(100px / 4);
-  top: calc(100px + calc(calc(100px / 4) * 3)); }
+  top: calc(100px + calc(calc(100px / 4) * 3));
+  z-index: 1; }
 
 .sm-puppet-leg-container {
   position: relative;
@@ -89,14 +110,17 @@ COLORS
     width: calc(100px / 8);
     height: calc(calc(100px / 4) * 3);
     background: #ffe83e;
-    z-index: 0; }
+    z-index: 0;
+    border-radius: calc(100px / 8); }
   .sm-puppet-arm .sm-puppet-forearm {
+    transform-origin: top center;
     width: calc(100px / 8);
     height: calc(calc(100px / 4) * 3);
-    margin-top: -5px;
+    margin-top: -8px;
     background: #ffb8f4;
     z-index: 1;
-    border-radius: calc(100px / 8); }
+    border-radius: calc(100px / 8);
+    transition: all .25s; }
   .sm-puppet-arm .sm-puppet-hand {
     position: absolute;
     width: calc(100px / 4);
@@ -109,16 +133,18 @@ COLORS
     left: calc(calc(100px / 8) * -1);
     transform: rotate(20deg) translateX(5px);
     transform-origin: top right; }
-    .sm-puppet-arm.sm-puppet-arm-left .sm-puppet-upper-arm {
-      border-top-left-radius: calc(100px / 8); }
+    .sm-puppet-arm.sm-puppet-arm-left .sm-puppet-forearm {
+      transform: rotate(-45deg);
+      margin-left: -5px; }
     .sm-puppet-arm.sm-puppet-arm-left .sm-puppet-hand {
       left: calc(calc(100px / 8) * -.5); }
   .sm-puppet-arm.sm-puppet-arm-right {
     right: calc(calc(100px / 8) * -1);
     transform-origin: top left;
     transform: rotate(-20deg) translateX(-5px); }
-    .sm-puppet-arm.sm-puppet-arm-right .sm-puppet-upper-arm {
-      border-top-right-radius: calc(100px / 8); }
+    .sm-puppet-arm.sm-puppet-arm-right .sm-puppet-forearm {
+      transform: rotate(45deg);
+      margin-left: 5px; }
     .sm-puppet-arm.sm-puppet-arm-right .sm-puppet-hand {
       left: calc(calc(100px / 8) * -.5); }
 
@@ -143,7 +169,8 @@ COLORS
     background: #0080f9;
     bottom: calc(calc(100px / 8) * -.5);
     z-index: 2;
-    border-radius: calc(calc(100px / 8) * .75); }
+    border-radius: calc(calc(100px / 8) * .75);
+    transition: all .25s; }
   .sm-puppet-leg.sm-puppet-leg-left {
     left: 0; }
   .sm-puppet-leg.sm-puppet-leg-right {
