@@ -118,6 +118,9 @@ $(document).on("keypress", function (e) {
     if (e.keyCode == 115) {
         puppetAction('sit');
     }
-   
+    // X is for Stop
+    if (e.keyCode == 120) {
+        puppetAction('stop');
+    }
 });
 
