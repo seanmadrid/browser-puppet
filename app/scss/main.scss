@@ -1,3 +1,8 @@
+html,
+html * {
+	cursor: none !important;
+}
+
 @import "variables";
 @import "positions";
 @import "puppet";

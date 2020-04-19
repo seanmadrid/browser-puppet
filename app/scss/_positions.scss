@@ -12,9 +12,14 @@
 	.sm-puppet-eyes {
 		margin-left: -5px;
 	}
-	.sm-puppet-leg .sm-puppet-foot {
-		left: -18px;
-		transform: rotate(-30deg);
+	.sm-puppet-leg {
+		.sm-puppet-lower-leg {
+			margin-left: 2px;
+		}
+		.sm-puppet-foot {
+			left: -18px;
+			transform: rotate(-30deg);
+		}
 	}
 }
 

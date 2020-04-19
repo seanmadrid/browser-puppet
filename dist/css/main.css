@@ -1,3 +1,7 @@
+html,
+html * {
+  cursor: none !important; }
+
 /*==========================
 DIMENSIONS
 ==========================*/
@@ -13,6 +17,9 @@ COLORS
 
 .screen-right .sm-puppet-eyes {
   margin-left: -5px; }
+
+.screen-right .sm-puppet-leg .sm-puppet-lower-leg {
+  margin-left: 2px; }
 
 .screen-right .sm-puppet-leg .sm-puppet-foot {
   left: -18px;
@@ -31,13 +38,15 @@ COLORS
 
 .smbrowserpuppet53 {
   position: fixed;
+  user-select: none;
   top: calc(100px / 8);
   left: calc(100px / 8);
   width: calc(100px * 2);
   height: calc(100px * 4);
   box-sizing: border-box;
   transition: transform .1s;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  z-index: 9999; }
   .smbrowserpuppet53 * {
     box-sizing: border-box;
     backface-visibility: hidden; }
@@ -46,7 +55,8 @@ COLORS
   position: relative;
   float: left;
   width: calc(100px * 2);
-  height: calc(100px * 4); }
+  height: calc(100px * 4);
+  transform: translateX(-50%) translateY(-50%); }
 
 .sm-puppet-head {
   display: block;
@@ -62,12 +72,13 @@ COLORS
   left: 50%;
   transform: translateX(-50%);
   top: calc(100px / 4);
-  transition: margin .25s; }
+  transition: margin .25s;
+  overflow: visible; }
 
 .sm-puppet-eye {
-  width: calc(calc(100px / 8) / 1.5);
-  height: calc(calc(100px / 8) / 1.5);
-  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
   background: black;
   opacity: .3333;
   position: absolute;
@@ -154,15 +165,19 @@ COLORS
   position: absolute;
   top: 0; }
   .sm-puppet-leg .sm-puppet-upper-leg {
-    width: calc(100px / 8);
+    width: calc(calc(100px / 8) + 2px);
     height: 100px;
-    background: #8cde7c; }
+    background: #8cde7c;
+    overflow: hidden;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; }
   .sm-puppet-leg .sm-puppet-lower-leg {
     width: calc(100px / 8);
     height: 100px;
     background: #8cde7c;
     border-radius: calc(100px / 8);
-    margin-top: -5px; }
+    margin-top: -5px;
+    overflow: hidden; }
   .sm-puppet-leg .sm-puppet-foot {
     position: absolute;
     left: -2px;

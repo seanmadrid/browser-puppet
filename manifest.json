@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Ffaffa The Browser Puppet",
+  "version": "0.1",
+  "description": "A cursor based puppet that interacts with web content",
+  "icons": {
+	"128": "icon_16.png",
+	"128": "icon_32.png",
+	"128": "icon_48.png",
+	"128": "icon_128.png"
+  },
+  "background": {
+  	"persistent": false,
+  	"scripts": ["background-script.js"]
+  },
+  "browser_action": {
+  	"default_icon": "icon_16.png",
+  	"default_popup": "popup.html"
+  }
+}
