@@ -1,6 +1,6 @@
 html,
 html * {
-  cursor: none !important; }
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA0IDQiPiAgPGNpcmNsZSBpZD0iRWxsaXBzZV8xIiBkYXRhLW5hbWU9IkVsbGlwc2UgMSIgY3g9IjIiIGN5PSIyIiByPSIyIiBmaWxsPSIjN2ZkMTZmIi8+PC9zdmc+"), auto; }
 
 /*==========================
 DIMENSIONS
